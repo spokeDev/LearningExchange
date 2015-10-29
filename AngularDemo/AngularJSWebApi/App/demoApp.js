@@ -3,8 +3,7 @@
 
     angular.module('demoApp', [
         // Angular modules
-        'ngAnimate',
-        'ngRoute'
+        'ngAnimate'
 
         // Custom modules
 

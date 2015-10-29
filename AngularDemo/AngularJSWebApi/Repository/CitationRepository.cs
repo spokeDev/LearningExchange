@@ -33,6 +33,8 @@ namespace AngularJSWebApi.Repository
 
         public static void AddCitation(Citation citation)
         {
+            int maxCitationID = citations.Max(a => a.ID);
+            citation.ID = maxCitationID + 1;
             citation.ViolationDateTime = DateTime.Now;
             citations.Add(citation);
         }

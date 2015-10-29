@@ -1,0 +1,23 @@
+﻿<div>
+
+    <h3>Add Citation</h3>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text" ng-model="vm.citation.Driver.FirstName" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.citation.Driver.LastName" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.citation.CitationNumber" class="form-control" placeholder="CitationNumber">
+        </div>
+        <div class="form-group">
+            <input type="number" ng-model="vm.citation.Fine" class="form-control" placeholder="Fine">
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="vm.save()">Save</button>
+        <button class="btn btn-warning" ng-click="vm.cancel()">Cancel</button>
+    </form>
+
+    {{vm.message}}
+</div>

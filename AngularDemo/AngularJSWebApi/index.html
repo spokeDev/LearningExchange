@@ -1,12 +1,16 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Learning Exchange : AngularJS and WebAPI</title>
+    <title></title>
 </head>
+
 <body ng-app="demoApp">
 
-    AngularJS
+    <nav ng-include="'app/layout/nav.html'"></nav>
 
+    <div class="container body-content">
+        <div ui-view></div>
+    </div>
 
     <script src="Scripts/jquery-2.1.4.min.js"></script>
     <script src="Scripts/angular.js"></script>
@@ -14,9 +18,14 @@
     <script src="Scripts/angular-ui-router.js"></script>
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
 
-    <script src="App/demoApp.js"></script>
+    <script src="App/demoApp.module.js"></script>
 
+    <script src="App/services/data.factory.js"></script>
+
+    <script src="App/citation/citations.controller.js"></script>
+    <script src="App/citation/citationAdd.controller.js"></script>
+    <script src="App/citation/citationEdit.controller.js"></script>
 </body>
 </html>

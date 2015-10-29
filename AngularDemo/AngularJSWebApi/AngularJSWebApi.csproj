@@ -75,7 +75,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App\demoApp.js" />
+    <Content Include="App\citation\citationAdd.controller.js" />
+    <Content Include="App\citation\citationAdd.html" />
+    <Content Include="App\citation\citationEdit.controller.js" />
+    <Content Include="App\citation\citationEdit.html" />
+    <Content Include="App\citation\citations.controller.js" />
+    <Content Include="App\citation\citations.html" />
+    <Content Include="App\demoApp.module.js" />
+    <Content Include="App\layout\nav.html" />
+    <Content Include="App\services\data.factory.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -133,7 +141,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App\services\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>

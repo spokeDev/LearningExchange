@@ -1,0 +1,68 @@
+﻿<div>
+    <h3>Citations</h3>
+
+    <form name="myForm" class="form-inline" novalidate>
+
+        <div class="form-group">
+            <input type="text" ng-model="vm.citationSearchViewModel.LastName" required name="lastName" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.citationSearchViewModel.FirstName" id="firstNameInput" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" ng-model="vm.citationSearchViewModel.MiddleName" id="middleNameInput" class="form-control" placeholder="Middle Name">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="vm.search()">Search</button>
+    </form>
+
+    <br /><br />
+
+    <div ng-if="vm.citations.length == 0">
+        No citations found
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3">
+            Name
+        </div>
+        <div class="col-xs-3">
+            Citation #
+        </div>
+        <div class="col-xs-2">
+            Fine
+        </div>
+        <div class="col-xs-2">
+            Incident Date
+        </div>
+    </div>
+    <br />
+    <div ng-repeat="citation in vm.citations">
+        <div class="row"> 
+            <div class="col-xs-3">
+                {{citation.Driver.LastName}}, {{citation.Driver.FirstName}}
+            </div>
+            <div class="col-xs-3">
+                {{citation.CitationNumber}}
+            </div>
+            <div class="col-xs-2">
+                {{citation.Fine | currency}}
+            </div>
+            <div class="col-xs-2">
+                {{citation.ViolationDateTime  |  date:"M/d/yyyy" }}
+            </div>                        
+            <div class="col-xs-2">
+                <button type="button" class="btn btn-default" ng-click="vm.editCitation(citation.ID)">
+                    <span class="glyphicon glyphicon glyphicon-pencil"></span>
+                </button>
+            </div>
+        </div>
+        <hr style="color:#000000" ng-show="!$last" />
+    </div>
+    <br /><br />
+    <div>
+        <button class="btn btn-success" ng-click="vm.addCitation(citation.ID)">Add Citation</button>
+    </div>
+    <div>
+        {{vm.message}}
+    </div>
+</div>
